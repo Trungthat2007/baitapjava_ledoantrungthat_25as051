@@ -74,4 +74,16 @@ public class Line {
     public void setEndXY(int x, int y) {
         end.setXY(x,y);
     }
+    public double getLength(){
+        int xDiff = getEndX() - getBeginX();
+        int yDiff =getEndY() - getBeginY();
+
+       return Math.sqrt(xDiff*xDiff + yDiff*yDiff);
+
+    }
+    public double getGradient(){
+        int xDiff =getEndX() - getBeginX();
+        int yDiff = getEndY() - getBeginY();
+        return Math.atan2(yDiff, xDiff);
+    }
 }
